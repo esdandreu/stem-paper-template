@@ -1,5 +1,5 @@
 % !TeX root = ./paper.tex
-\documentclass[12pt, twocolumn]{src/stem-paper}
+\documentclass[a4paper]{IEEEtran}
 
 %% Import additional packages and header definitions
 % For the LaTex newbies, \input let's you introduce a .tex file as if it were
@@ -27,7 +27,6 @@
   Gimenez Bolinches, Andreu \\
   \textit{esdandreu@gmail.com} \\
 }
-\date{\today}
 
 \begin{document}
 % *****************************************************************************
@@ -37,7 +36,7 @@
 \maketitle
 
 \IfFileExists{./abstract.tex}{
-    \begin{abstract} \include*{abstract} \end{abstract}
+    \begin{abstract}\input{abstract}\end{abstract}
 }
 
 % *****************************************************************************
@@ -49,7 +48,7 @@
 % *****************************************************************************
 %                              Bibliography
 % *****************************************************************************
-\singlespace
+\bibliographystyle{IEEEtran}  
 \printbibliography[%
     % heading=bibintoc,%
     title={References}%
@@ -59,9 +58,8 @@
 %                              Appendices
 % *****************************************************************************
 \IfFileExists{./appendices.tex}{
-    \appendix
+    \appendices
     \include{appendices}
-    \unappendix
     \clearpage
 }
 

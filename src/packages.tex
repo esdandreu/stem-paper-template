@@ -4,12 +4,22 @@
 \usepackage[english]{babel}
 \usepackage{comment}
 \usepackage{csquotes}
-\usepackage[
-    style=numeric,
-    sorting=ynt
-]{biblatex}
+\usepackage[style=numeric, sorting=ynt]{biblatex}
 
 %% Essential packages
+% Colors
+\usepackage{xcolor} 
+\colorlet{documentLinkColor}{blue}
+\colorlet{documentCitationColor}{black!80}
+\definecolor{headergray}{rgb}{0.5,0.5,0.5}
+% Hyperlinks
+\usepackage{hyperref}
+\hypersetup{
+     colorlinks = true,
+     citecolor = documentCitationColor,
+     linkcolor = documentLinkColor,
+     urlcolor = documentLinkColor,
+}
 % Diagrams and \foreach
 \usepackage{tikz}
 \input{src/packages/tkiz_setup.tex}
@@ -24,26 +34,14 @@
 \pgfplotsset{compat=1.17}
 % Good equations
 \usepackage[cmex10]{amsmath}
-% Better references
-\usepackage[noabbrev,nameinlink]{cleveref}
 % Code snippets
 \usepackage{listings}
 % Better include
 \usepackage{newclude}
-
-% TODO should be empty for a template, the .cls file should be standalone
-\usepackage{pdfcomment}
-\usepackage{amsfonts}
-\usepackage{setspace}
-\usepackage{layout}
-% \usepackage[subfigure]{tocloft}  % Set TOC options.
-
-% \usepackage[format=hang]{subfig}  % Do not include caption package in here.
-\usepackage{algorithm}
-\usepackage{algpseudocode} % algorithmicx
-\usepackage{ctable}
-\usepackage{multirow}
+% Better references
+\usepackage[noabbrev,nameinlink]{cleveref}
 
 % ``float'' algorithms
+\usepackage{algorithm}
 \usepackage{float}
 \newfloat{algorithm}{tbp}{lop}

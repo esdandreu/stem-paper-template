@@ -16,11 +16,6 @@
 \newcommand{\defaultAxisWidth}{0.7\textwidth}
 \newcommand{\defaultAxisHeight}{0.5\textwidth}
 
-% Footnote for an entire chapter -- no symbol, just text at the bottom.
-\newcommand{\chapternote}[1]{{%
-  \let\thempfn\relax% Remove footnote number printing mechanism
-  \footnotetext[0]{\emph{#1}}% Print footnote text
-}}
 
 \newcommand{\tabulargraphics}[2][width=0.25\textwidth]{
   \raisebox{-.5\height}{\includegraphics[#1]{#2}}
